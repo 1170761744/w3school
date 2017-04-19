@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var xmlhttp;
+			function loadXMLDoc(url){
+				//创建XMLHttpRequest对象
+				if(window.XMLHttpRequest){
+					xmlhttp=new XMLHttpRequest();
+				}else{
+					xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				if(xmlhttp!=null){
+					xmlhttp.onreadystatechange=function(){
+						if(xmlhttp.readystate==4){
+							if(xmlhttp.status==200){
+							document.getElementById("t1").innerHTML=xmlhttp.responseText;
+							}
+						}else{
+							alert("问题："+xmlhttp.statusText);
+						}
+					}
+					xmlhttp.open("POST",url,true);
+					xmlhttp.send();
+				}else{
+					alert("你的浏览器不支持XMLHttpRequest");
+				}
+			}
+		</script>
+	</head>
+	<body onload='loadXMLDoc("file/testText1.txt")'>
+		<div id="t1"><div>
+		<button onclick="loadXMLDoc('file/testText2.txt')">点我</button>
+	</body>
+</html>

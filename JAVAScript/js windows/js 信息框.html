@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="button" value="显示警告框" onclick="showJ()"/>
+	<input type="button" value="显示确认框" onclick="showQ()"/>
+	<input type="button" value="显示提示框" onclick="showT()"/>
+	<script>
+		function showJ(){
+			alert("这是一个"+"\n"+"有折行的警告框。");
+		}
+		function showQ(){
+			var r = confirm("Press a button！");
+			if(r==true){
+				alert("You pressed OK!");
+			}else{
+				alert("You pressed cancel!");
+			}
+		}
+		function showT(){
+			var name=prompt("请输入你的名字");
+			if(name!=null || name!=""){
+				document.write("你好"+name+"今天过得怎么样？");
+			}
+		}
+	</script>
+  </body>
+</html>

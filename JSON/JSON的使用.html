@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+ </head>
+ <body>
+	<h2>JSON的使用</h2>
+	<p>
+	firstName:<span id="fname"></span><br/>
+	lastName:<span id="lname"></span>
+	</p>
+
+	  <script>
+	var txt = '{"employees":['+'{"firstName":"Bill","lastName":"Gates"},'+'{"firstName":"Geogle","lastName":"Bush"},'+'{"firstName":"Stefen","lastName":"Curry"}]}'
+
+	var obj = eval("("+txt+")");
+
+	document.getElementById("fname").innerHTML=obj.employees[1].firstName;
+	document.getElementById("lname").innerHTML=obj.employees[1].lastName 
+  </script>
+ </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+	<script>
+		var txt = "Hello World!";
+		document.write(txt.length);
+		document.write("<p>Big:"+txt.big()+"<p>");
+		document.write("<p>Small:"+txt.small()+"<p>");
+		document.write("<p>Bold:"+txt.bold()+"<p>");
+		document.write("<p>Italics:"+txt.italics()+"<p>");
+		document.write("<p>Blink:"+txt.blink()+"<p>");
+		document.write("<p>Fontcolor:"+txt.fontcolor("red")+"<p>");
+		document.write("<p>Fontsize:"+txt.fontsize("40px")+"<p>");
+		document.write("<p>Lowercase:"+txt.toLowerCase()+"<p>");
+		document.write("<p>Subscript:"+txt.sub()+"<p>");
+
+		document.write(txt.indexOf("Hello")+"<br/>");
+		document.write(txt.indexOf("world")+"<br/>");
+		document.write(txt.indexOf("World")+"<br/>");
+
+		document.write(txt.match("Hello")+"<br/>");
+		document.write(txt.match("world")+"<br/>");
+		document.write(txt.match("World")+"<br/>");
+		document.write(txt.match("hfhsa")+"<br/>");
+
+		document.write(txt.replace(/Hello/,"My"));
+	</script>
+  </body>
+</html>

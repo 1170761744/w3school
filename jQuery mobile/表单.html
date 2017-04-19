@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	</head>
+	<body>
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>jQuery Mobile表单</h1>
+			</div>
+			<div data-role="content">
+				<form method="post" action="http://www.baidu.com">
+					<div data-role="fieldcontain">
+						<label for="name">全名：</label>
+						<input type="text" name="name" id="name" placeholder="你的姓名是？"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="search">需要查找什么？</label>
+						<input type="search" name="search" id="search" placeholder="搜索内容">
+					</div>
+					<div data-role="fieldcontain">
+						<label for="date">需要查找什么？</label>
+						<input type="date" name="date" id="date" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="color">选择喜欢的颜色：</label>
+						<select name="color" id="color">
+							<option value="green">绿色</option>
+							<option value="red">红色</option>
+							<option value="blue">蓝色</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="swicth">切换开关</label>
+						<select name="swicth" id="swicth" data-role="slider">
+							<option value="on">开</option>
+							<option value="off">关</option>
+						</select>
+					</div>
+					<fieldset data-role="controlgroup">
+						<legend>选择喜欢的电影：</legend>
+						<label for="mov1">烈日灼心</label>
+						<input type="checkbox" name="mov1" id="mov1" />
+						<label for="mov2">神奇动物在哪里</label>
+						<input type="checkbox" name="mov2" id="mov2"/>
+						<label for="mov3">血战钢锯岭</label>
+						<input type="checkbox" name="mov3" id="mov3"/>
+					</fieldset>
+				</form>
+			</div>
+			<div data-role="footer">
+			</div>
+		</div>
+	</body>
+</html>

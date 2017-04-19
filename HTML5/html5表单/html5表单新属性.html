@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form action="http://www.baidu.com" method="post" autocomplete="on" id="form">
+      First name:<input type="text" name="firstName" /><br/>
+      Last name:<input type="text" name="lastName" autofocus="autofocus"/><br/>
+      E-mail:<input type="email" name="email" autocomplete="off"/ placeholder="1024"><br/>
+      <input type="submit"/><br/>
+	  选择照片：<input type="file" name="img" multiple="multiple"/>
+	  <input type="submit"/>
+    </form>
+	<p>下面的输入域在 form 元素之外，但仍然是表单的一部分。</p>
+	Second name:<input type="text" name="secondName" form="form">
+  </body>
+</html>

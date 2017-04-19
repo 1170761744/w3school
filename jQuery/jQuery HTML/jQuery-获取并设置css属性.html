@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="i/jquery-3.1.1.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    $("button").click(function(){
+		  $("h1,h2,p").addClass("blue");
+		  $("div").addClass("important blue");
+		});
+		$("#btn").click(function(){
+		  $("h1,h2,p").removeClass("blue");
+		});
+		$("#ar").click(function(){
+		  $("h1,h2,p").toggleClass("blue");
+		  $("div").toggleClass("important blue");
+		});
+	  });
+	</script>
+	<style type="text/css">
+	  .blue{color:blue}
+	  .important{
+	    font-size:30px;
+		font-weight:bold;
+	  }
+	</style>
+  </head>
+  <body>
+    <h1>标题一</h1>
+	<h2>标题2</h2>
+	<p>这是一个段落。</p>
+	<p>这是另一个段落。</p>
+	<div>这是非常重要的文本！</div>
+	<button>向元素添加类</button>
+	<input id="btn" type="button" value="从元素上删除类"/>
+	<input id="ar" type="button" value="添加/删除类"、>
+  </body>
+</html>

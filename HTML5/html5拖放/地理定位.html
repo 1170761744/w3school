@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="demo">点击这个按钮，获取你的地理坐标：</p>
+  <button onclick="getLocation()">试一下</button>
+  <script type="javascript">
+    var x=document.getElementById("demo");
+    function getLocation(){
+	if(navigator.geolocation){
+	  navigator.geolocation.getCurrentPosition(showPosition);
+	}
+	else{
+	  x.innerHTML="你的浏览器不支持定位。"
+	}
+    }
+    function showPosition(position){
+      x.innerHTML="维度："+position.coords.latitude+"<br/>经度："+position.coords.longtitude;
+    }
+  </script>
+</body>
+</html>

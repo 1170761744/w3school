@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+function cnvs_getCoordinates(e){
+  x=e.clientX;
+  y=e.clientY;
+  document.getElementById("xycoordinates").innerHTML="Coordiantes:("+x+","+y+")";
+}
+
+function cnvs_clearCoordinates(){
+  document.getElementById("xycoordinates").innerHTML="";
+}
+</script>
+</head>
+
+<body style="margin:0px;">
+<p>把鼠标悬停在下面的矩形上可以看到坐标：</p>
+
+<div id="coordiv" style="float:left;width:200px;height:100px;border:1px 
+solid gray" onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"></div>
+<br/>
+<br/>
+<br/>
+<div id="xycoordinates"></div>
+</body>
+</html>

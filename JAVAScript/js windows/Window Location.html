@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+	  document.write(location.hostname+"<br/>");	
+	  document.write(location.pathname+"<br/>");	
+	  document.write(location.port+"<br>");	
+	  document.write(location.protocol+"<br/>");	
+	  document.write(location.href+"<br/>");
+	  function newDoc(){
+		location.assign("http://www.w3school.com.cn");
+	  }
+	  function goForward(){
+		history.forward();
+	  }
+	  function goBack(){
+		history.back();
+	  }
+    </script>
+	<input type="button" value="加载新文档" onclick="newDoc()"/>
+	<input type="button" value="前进" onclick="goForward()"/>
+	<input type="button" value="后退" onclick="goBack()"/>
+  </body>
+</html>

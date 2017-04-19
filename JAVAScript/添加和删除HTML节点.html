@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="div1">
+      <p id="p1">这是一个段落</p>
+	  <p id="p2">这是另一个段落</p>
+    </div>
+
+	<script>
+	  var para = document.createElement("p"); //1.创建新的<p>元素
+	  var node = document.createTextNode("这是新的段落"); //2.创建文本节点
+	  para.appendChild(node); //3.向p元素中追加这个文本节点
+	  var element = document.getElementById("div1"); //4.找到一个已有的元素
+	  element.appendChild(para); //5.向这个已有的元素追加新元素
+	  //一、删除子元素的第一种方法
+	  var parent = document.getElementById("div1");//1.找到父元素
+	  var child = document.getElementById("p1");//2.找到要删除的子元素
+	  parent.removeChild(child);//3.从父元素中删除子元素
+	  //二、删除子元素的第二个方法
+	  var child2 = document.getElementById("p2");//1.找到子元素
+	  child2.parentNode.removeChild(child2);//2.使用parentNode方法找到父元素
+	</script>
+  </body>
+</html>

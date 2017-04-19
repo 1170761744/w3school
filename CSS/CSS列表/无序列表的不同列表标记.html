@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+	  #circle {list-style-type:circle;}
+	  ul.square {list-style-type:square;}
+	  #none {list-style:url("i/eg_arrow.gif");}
+	  .inside {list-style-position:inside;}
+	  .outside {list-style-position:outside;}
+	</style>
+  </head>
+  <body>
+    <ul>
+      <li>咖啡</li>
+      <li>茶</li>
+      <li>可口可乐</li>
+    </ul>
+    <ul id="circle">
+      <li>咖啡</li>
+      <li>茶</li>
+      <li>可口可乐</li>
+    </ul>
+    <ul class="square">
+      <li>咖啡</li>
+      <li>茶</li>
+      <li>可口可乐</li>
+    </ul>
+	<ul id="none">
+      <li>咖啡</li>
+      <li>茶</li>
+      <li>可口可乐</li>
+    </ul>
+
+	<p>该列表的 list-style-position 的值是 "inside"：</p>
+    <ul class="inside">
+	  <li>Earl Grey Tea - 一种黑颜色的茶</li>
+	  <li>Jasmine Tea - 一种神奇的“全功能”茶</li>
+	  <li>Honeybush Tea - 一种令人愉快的果味茶</li>
+	</ul>
+
+	<p>该列表的 list-style-position 的值是 "outside"：</p>
+	<ul class="outside">
+	  <li>Earl Grey Tea - 一种黑颜色的茶</li>
+	  <li>Jasmine Tea - 一种神奇的“全功能”茶</li>
+	  <li>Honeybush Tea - 一种令人愉快的果味茶</li>
+	</ul>
+	<p>inside 是说数字或者方格样式在li的里面，他是占用li的宽度的，而outside则是在li的外面，他不占用li的宽度。</p>
+  </body>
+</html>

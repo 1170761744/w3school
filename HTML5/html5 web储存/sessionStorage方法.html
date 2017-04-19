@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>sessionStorage方法</title>
+  <script type="text/javascript">
+   function clickCounter(){
+     if(typeof(Storage)!=="undefined"){
+		if(sessionStorage.clickcount){
+			sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+		}else{
+			sessionStorage.clickcount=1;
+		}
+		document.getElementById("result").innerHTML="在本session中，您已经点击了这个按钮"+sessionStorage.clickcount+"次。";
+	 }else{
+		document.getElementById("result").innerHTML="抱歉，你的浏览器不支持sessionStorage..";
+	 }
+   }
+  </script>
+ </head>
+ <body>
+  <p><button onclick="clickCounter()" type="button">点这里
+  </button></p>
+  <div id="result"></div>
+  <p>请点击按钮使计数器递增。</p>
+  <p>请关闭浏览器或标签页，然后再试一次，会发现计数器会重置。</p>
+ </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").click(function(){
+					$.get("testText2.txt",function(data,status){
+						document.getElementById("t1").innerHTML=data;
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="t1"><div>
+		<button>µ„Œ“</button>
+	</body>
+</html>

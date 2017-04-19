@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+	  function checkCookie(){
+		username=getCookie("username");
+		if(username!=null && username!=""){
+			alert("欢迎回来"+username+"!");
+		}else{
+			username=prompt("请输入你的名字：","");
+			if(username!=null && username!=""){
+				setCookie("username",username,365);
+			}
+		}
+	  }
+	  function getCookie(cname){
+		if(document.cookie.length>0){
+			cstart=document.cookie.indexOf(cname+"=");
+			if(cstart!=-1){
+				cstart= cstart+cname.length+1;
+				cend=document.cookie.indexOf(";",cstart);
+				if(cend==-1)
+					cend=document.cookie.length;
+				return unescape(document.cookie.substring(cstart,cend));
+			}
+		}
+	  }
+	  function setCookie(c_name,value,expiredays){
+		var exdate=new Date()
+		exdate.setDate(exdate.getDate()+expiredays)
+		document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+	  }
+	</script>
+  </head>
+  <body onload="checkCookie()"></body>
+</html>

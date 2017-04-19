@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <p>每个表格由table标签开始</p>
+  <p>每个表格行由tr标签开始</p>
+  <p>每个表格数据有td标签开始</p>
+  <!-- 一行一列表格
+		带边框
+  -->
+  <table border="1">
+  <tr><td>100</td></tr>
+  </table>
+  <!-- 一行三列表格 -->
+  <table>
+  <tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+  </tr>
+  </table>
+  <!-- 两行三列表格 -->
+  <table border="1" cellpadding="10" cellspacing="10" background="file:///c:\Users\a6929\Desktop\1\img8.jpg">
+  <caption>我的标题</caption>
+  <tr>
+  <th>语文</th>
+  <th>数学</th>
+  <th>&nbsp;</th>
+  </tr>
+  <tr>
+  <td>100</td>
+  <td>100</td>
+  <td>100</td>
+  </tr>
+  <tr>
+  <td>100</td>
+  <td>100</td>
+  <td>100</td>
+  </tr>
+  </table>
+  <!-- 跨两列的表格 -->
+  <h4>横跨两列的单元格：</h4>
+  <table border="1">
+  <tr>
+  <th>姓名</th>
+  <th colspan="2">电话</th>
+  </tr>
+  <tr>
+  <td>张文杰</td>
+  <td>1231325</td>
+  <td>8515151</td>
+  </tr>
+  </table><br/><hr/>
+  <!-- 跨两行的单元格 -->
+  <table border="1">
+  <caption><h2>跨两行的单元格</h2></caption>
+	<tr>
+		<th>姓名</th>
+		<td>张文杰</td>
+	</tr>
+	<tr>
+		<th rowspan="2">电话</th>
+		<td>41215546</td>
+	</tr>
+	<tr>
+		<td>7946446</td>
+	</tr>
+  </table><br/><hr/>
+  <!--表格内的标签-->
+  <table border="1">
+	<tr>
+		<td>
+		  <p>这是一个段落</p>
+		  <p>这是另一个段落</p>
+		</td>
+		<td>这个单元包含一个表格：
+			<table border="1">
+				<tr>
+					<td>A</td>
+					<td>B</td>
+				</tr>
+				<tr>
+					<td>C</td>
+					<td>D</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+		<td>这个单元包含一个列表：
+			<ul>
+				<li>番茄</li>
+				<li>苹果</li>
+				<li>橘子</li>
+			</ul>
+		</td>
+		<td>HELLO</td>
+	</tr>
+  </table>
+ </body>
+</html>

@@ -1,0 +1,67 @@
+$(document).ready(function(){
+//<!--jQuery隐藏/显示-->
+  $(".ex .hide").click(function(){
+    $(this).parents(".ex").hide("slow");
+  });
+  $("#hide").click(function(){
+    $("#p1").toggle();
+  });//隐藏/显示切换
+  $("#show").click(function(){
+    $("#p1").show("fast");
+  });
+ //	<!--jQuery淡入淡出-->
+  $("#button1").click(function(){
+    $("#div1").fadeIn();
+	$("#div2").fadeIn("slow");
+	$("#div3").fadeIn(3000);
+  });//淡入
+  $("#button2").click(function(){
+    $("#div1").fadeOut();
+	$("#div2").fadeOut("slow");
+	$("#div3").fadeOut(3000);
+  });//淡出
+  $("#button3").click(function(){
+    $("#div1").fadeToggle();
+	$("#div2").fadeToggle("slow");
+	$("#div3").fadeToggle(3000);
+  });//淡入淡出切换
+  $("#button4").click(function(){
+    $("#div1").fadeTo("slow",0.15);
+	$("#div2").fadeTo("slow",0.4);
+	$("#div3").fadeTo("slow",0.7);
+  });//带透明度
+//<--jQyery滑动-->
+  $(".slip").click(function(){
+    $(".panel").slideToggle(3000);
+  });//上下翻切换
+  $(".slipup").click(function(){
+    $(".panel").slideUp("slow");
+  });//上翻
+//<!--jQuery动画-->
+  $("#button5").click(function(){
+    $("#div4").animate({
+		left:"550px",
+		opacity:'0.5',
+		height:'+=150px',
+		width:'+=150px'
+		},"slow");
+  });
+  $("#button6").click(function(){
+    $(".panel").stop();
+  });//jQuery stop()
+  /*$("#button7").click(function(){
+    $("#p2").hide(2000);
+	alert("段落已经被隐藏了！");
+  });//错误（没有callback）*/
+  $("#button7").click(function(){
+    $("#p2").hide(2000,function(){
+	  alert("段落已经被隐藏了！");
+	});
+  });//正确（有callback）
+  //<!--jQuery链-->
+  $("#button8").click(function(){
+    $("#p3").css("color","red")
+		.slideUp(2000)
+		.slideDown(2000);
+  });
+});

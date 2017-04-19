@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="button" value="显示定时的警告框" onclick="timedMsg()"/><br/>
+	<input type="button" value="显示计时的文本" onclick="showText()" />
+	<input type="text" id="text">
+	<p>点击上面的按钮。输入框会显示出已逝去的时间(2/4/6秒)。</p>
+	<input type="button" value="开始计时" onclick="startCount()"/>
+	<input type="text" id="t"/>
+	<input type="button" value="停止计时" onclick="stopCount()">
+	<script>
+	  function timedMsg(){
+		var c = setTimeout("alert('5秒')",5000);
+	  }
+	  function showText(){
+		var t1 = setTimeout("document.getElementById('text').value='2秒'",2000);
+		setTimeout("document.getElementById('text').value='4秒'",4000);
+		setTimeout("document.getElementById('text').value='6秒'",6000);
+	  }
+	  var c=0;
+	  var t;
+	  function startCount(){
+		document.getElementById("t").value=c;
+		c=c+1;
+		t=setTimeout("startCount()",1000);
+	  }
+	  function stopCount(){
+		clearTimeout(t);
+	  }
+	</script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <body>
+	<script>
+		var x;
+		var array = new Array();
+		array[0] = "1";
+		array[1] = "5";
+		array[2] = "3";
+
+		var arr = new Array(3)
+		arr[0] = "George"
+		arr[1] = "John"
+		arr[2] = "Thomas"
+
+		for(i=0;i<array.length;i++){
+			document.write(array[i]+"<br/>");
+		}
+		for(x in array){
+			document.write(array[x]+"<br/>");
+		}
+
+		document.write(arr.concat(array)+"<br/>");
+		document.write(arr.join()+"<br/>");
+		document.write(arr.join(".")+"<br/>");
+
+		document.write(arr+"<br/>");
+		document.write(arr.sort()+"<br/>");
+
+		document.write(array+"<br/>");
+		document.write(array.sort(sortNumber));
+		
+		function sortNumber(a, b){
+			return a - b
+		}
+	</script>
+  </body>
+</html>

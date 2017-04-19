@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+	  function testMessage(){
+		try{
+			var x = document.getElementById("1").value;
+			if(x=="")     throw "值为空";
+			if(isNaN(x))  throw "不是数字";
+			if(x>10)	  throw "值太大";
+			if(x<5)		  throw "值太小";
+		}catch(err){
+			document.getElementById("error").innerHTML = "错误："+err+".";
+		}
+	  }
+	</script>
+  </head>
+  <body>
+    <div id="demo">
+		<h1>我的第一个JavaScript程序</h1>
+		<p>请输入5到10之间的数字：</p>
+		<input type="text" id="1"/>
+		<input type="button" value="测试输入值" onclick="testMessage()"/>
+		<p id="error"></p><hr/>
+		<p id="intro">Hello World!</p>
+		<p>本例演示<b>getElementById</b>方法！</p>
+	</div>
+	<script>
+	  var y = document.getElementById("intro");
+	  document.write('<p>id="intro"的段落中的文本是：'+y.innerHTML+'<p>');
+	  var z = document.getElementById("demo").getElementsByTagName("p");
+	  document.write("id为'demo'的div中的第一段文本是:"+z[0].innerHTML);
+	</script>
+  </body>
+</html>

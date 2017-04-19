@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="i/jquery-3.1.1.js"></script>
+	<script>
+	  $(document).ready(function(){
+		//获得内容
+	    $("#button1").click(function(){
+		  alert("文本："+$("#p1").text());
+		});
+		$("#button2").click(function(){
+		  alert("HTML:"+$("#p1").html());
+		});
+		//获得输入字段的值
+		$("#button3").click(function(){
+		  alert("Value:"+$("#text1").val());
+		});
+		//获得属性值
+		$("#button4").click(function(){
+		  alert($("#a1").attr("href"));
+		});
+		//设置文本
+		$("#button5").click(function(){
+		  $("#p2").text("Hello World!");
+		});
+		//设置HTML
+		$("#button6").click(function(){
+		  $("#p3").html("<b>Hello World</b>");
+		});
+		//设置值
+		$("#button7").click(function(){
+		  $("#text2").val("唐老鸭");
+		});
+		//text(),html(),val()的回调函数
+		$("#button8").click(function(){
+		  $("#p4").text(function(i,oldText){
+		   return "Old text:"+oldText+"New text:Hello World!";
+		  });
+		});
+		$("#button9").click(function(){
+		  $("#p5").html(function(i,oldText){
+		    return "Old html:"+oldText+"New html:Hello World!(index:"+i+")";
+		  });
+		});
+		//设置属性
+		$("#button10").click(function(){
+		  $("#a2").attr({
+		    "href":"http://www.w3school.com.cn/jquery/",
+			"title":"jQuery教程"
+		  });
+		});
+		//attr()的回调函数
+        $("#button11").click(function(){
+		  $("#a3").attr({
+		    "href":function(i,origValue){return origValue+"/jquery";},
+			"title":function(i,origValue){return "jQuery教程";}
+		  });
+		});
+	  });
+	</script>
+  </head>
+  <body>
+    <p id="p1">这是段落中的<b>粗体</b>文本。</p>
+	<input type="button" value="显示文本" id="button1"/>
+	<input type="button" value="显示HTML" id="button2"/><br/><br/>
+	姓名：<input type="text" id="text1" value="米老鼠"/><br/><br/>
+	<input type="button" value="显示值" id="button3"/><br/>
+    <p><a href="http://www.w3school.com.cn" id="a1">W3Schoolcom.cn</a></p>
+	<button id="button4">显示href值</button>
+	<p>
+    text() - 设置或返回所选元素的文本内容<br/>
+    html() - 设置或返回所选元素的内容（包括 HTML 标记）<br/>
+    val() - 设置或返回表单字段的值<br/>
+	attr() - 获取属性值
+    </p>
+
+	<p id="p2">这是段落。</p>
+	<p id="p3">这是另一个段落。</p>
+	<p>输入文本：<input type="text" value="米老鼠" id="text2"/></p>
+	<input type="button" value="设置文本" id="button5"/>
+	<input type="button" value="设置HTML" id="button6"/>
+	<input type="button" value="设置值" id="button7"/>
+	<p id="p4">这是<b>粗体</b>文本。</p>
+	<p id="p5">这是另一段<b>粗体</b>文本。</p>
+	<input type="button" value="显示旧/新文本" id="button8"/>
+	<input type="button" value="显示旧/新HTML" id="button9"/>
+    <p><a href="http://www.w3school.com.cn" title="w3school教程" id="a2">W3Schoolcom.cn</a></p>
+    <button id="button10">改变href和title值</button>
+	<p>请把鼠标指针移动到链接上，或者点击该链接，来查看已经改变的 href 值和已经设置的 title 值。</p>
+	<p><a href="http://www.w3school.com.cn" title="w3school教程" id="a3">W3Schoolcom.cn</a></p>
+    <button id="button11">改变href和title值</button>
+	<p>请把鼠标指针移动到链接上，或者点击该链接，来查看已经改变的 href 值和已经设置的 title 值。</p>
+  </body>
+</html>
