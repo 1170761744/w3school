@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+		#dakainfo{
+			margin-left:auto;
+			margin-right:auto;
+			width:770px;
+			border-collapse:collapse;
+		}
+		#dakainfo td{
+			border:1px solid #3e96c6;
+			text-align:center;
+			font-weight:bold;
+			height:18px;
+			width:110px;
+		}
+		#dakainfo .data td{
+			background:#c8c8ff;
+			border-bottom:none;
+		}
+		#dakainfo .time td{
+			height:20px;
+			border-top:none;
+		}
+		#dakainfo .time td{
+			font-size:8px;
+			font-weight:normal;
+		}
+		</style>
+		<script src="https://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+		for(x in myObj){
+        document.getElementById(x).innerHTML = myObj[x];}
+    }
+};
+/*$(document).ready(function(){
+	$.get("demo.txt",function(data,status){
+		alert(data);
+		myObj = JSON.parse(data);
+        document.getElementById("id1").innerHTML = myObj.name;
+	});
+});*/
+xmlhttp.open("GET", "demo.txt", true);
+xmlhttp.send();
+		</script>
+	</head>
+	<body>
+		<table id="dakainfo" title="考勤打卡信息">
+			<tr>
+				<td colspan="7">2017年3月</td>
+			</tr>
+				<td>星期日</td>
+				<td>星期一</td>
+				<td>星期二</td>
+				<td>星期三</td>
+				<td>星期四</td>
+				<td>星期五</td>
+				<td>星期六</td>
+			<tr class="data">
+				<td><font color="#1884a7">2月26日</font></td>
+				<td><font color="#1884a7">2月27日</font></td>
+				<td><font color="#1884a7">2月28日</font></td>
+				<td>3月1日</td>
+				<td>3月2日</td>
+				<td>3月3日</td>
+				<td>3月4日</td>
+			</tr>
+			<tr class="time">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td id="id1"></td>
+				<td id="id2"></td>
+				<td id="id3"></td>
+				<td id="id4"></td>
+			</tr>
+			<tr class="data">
+				<td>3月5日</td>
+				<td>3月6日</td>
+				<td>3月7日</td>
+				<td>3月8日</td>
+				<td>3月9日</td>
+				<td>3月10日</td>
+				<td>3月11日</td>
+			</tr>
+			<tr class="time">
+				<td id="id5"></td>
+				<td id="id6"></td>
+				<td id="id7"></td>
+				<td id="id8"></td>
+				<td id="id9"></td>
+				<td id="id10"></td>
+				<td id="id11"></td>
+			</tr>
+			<tr class="data">
+				<td>3月12日</td>
+				<td>3月13日</td>
+				<td>3月14日</td>
+				<td>3月15日</td>
+				<td>3月16日</td>
+				<td>3月17日</td>
+				<td>3月18日</td>
+			</tr>
+			<tr class="time">
+				<td id="id12"></td>
+				<td id="id13"></td>
+				<td id="id14"></td>
+				<td id="id15"></td>
+				<td id="id16"></td>
+				<td id="id17"></td>
+				<td id="id18"></td>
+			</tr>
+			<tr class="data">
+				<td>3月19日</td>
+				<td>3月20日</td>
+				<td>3月21日</td>
+				<td>3月22日</td>
+				<td>3月23日</td>
+				<td>3月24日</td>
+				<td>3月25日</td>
+			</tr>
+			<tr class="time">
+				<td id="id19"></td>
+				<td id="id20"></td>
+				<td id="id21"></td>
+				<td id="id22"></td>
+				<td id="id23"></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="data">
+				<td>3月26日</td>
+				<td>3月27日</td>
+				<td>3月28日</td>
+				<td>3月29日</td>
+				<td>3月30日</td>
+				<td>3月31日</td>
+				<td><font color="#1884a7">4月1日</font></td>
+			</tr>
+			<tr class="time">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="data">
+				<td><font color="#1884a7">4月2日</font></td>
+				<td><font color="#1884a7">4月3日</font></td>
+				<td><font color="#1884a7">4月4日</font></td>
+				<td><font color="#1884a7">4月5日</font></td>
+				<td><font color="#1884a7">4月6日</font></td>
+				<td><font color="#1884a7">4月7日</font></td>
+				<td><font color="#1884a7">4月8日</font></td>
+			</tr>
+			<tr class="time">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table><br/>
+	</body>
+</html>
